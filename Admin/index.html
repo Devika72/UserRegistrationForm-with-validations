@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "admin") {
+        // Redirect to admin dashboard or perform desired actions
+        //alert("Login successful! Redirecting to admin dashboard.");
+        window.location.href = "admin_dashboard.html";
+      } else {
+        // Show error message
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body style="background-color:rgb(113, 239, 199);">
+  <center style="padding-top: 50px;">
+  <h2>Admin Login</h2>
+  <form>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <input type="button" value="Login" onclick="login()">
+    </div>
+  </form>
+</body>
+</center>
+</html>
